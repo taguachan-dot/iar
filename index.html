@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nome da Organização</title>
+  <meta name="description" content="Uma frase sobre o que a Nome da Organização faz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Layout: um bloco só, alinhado à esquerda, centralizado na tela */
+    :root {
+      --fundo: #eef3f1;
+      --texto: #18302a;
+      --suave: #4c645d;
+      --destaque: #1f6f5c;
+      --destaque-texto: #ffffff;
+      --fonte-titulo: "Fraunces", Georgia, serif;
+      --fonte-texto: "Work Sans", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fundo: #121c19; --texto: #e6efec; --suave: #a3b8b1;
+        --destaque: #5fc0a5; --destaque-texto: #0d1a16; color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --fundo: #121c19; --texto: #e6efec; --suave: #a3b8b1;
+      --destaque: #5fc0a5; --destaque-texto: #0d1a16; color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: var(--fonte-texto);
+      padding-block: 48px;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+    main { max-width: 36rem; display: grid; gap: 24px; }
+    h1 {
+      margin: 0;
+      font-family: var(--fonte-titulo);
+      font-weight: 600;
+      font-size: clamp(2.25rem, 7vw, 3.5rem);
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+    p { margin: 0; font-size: 1.15rem; line-height: 1.6; color: var(--suave); }
+    .botao {
+      justify-self: start;
+      background: var(--destaque);
+      color: var(--destaque-texto);
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+    }
+    .botao:hover { opacity: 0.9; }
+    .botao:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
+    small { color: var(--suave); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nome da Organização</h1>
+    <p>Escreva aqui, em uma frase, o que a sua organização faz e para quem.</p>
+    <a class="botao" href="mailto:contato@suaorganizacao.org">Fale com a gente</a>
+    <small>contato@suaorganizacao.org</small>
+  </main>
+</body>
+</html>
